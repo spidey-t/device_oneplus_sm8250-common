@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+TARGET_KERNEL_CLANG_VERSION := r563880c
 COMMON_PATH := device/oneplus/sm8250-common
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -81,6 +82,7 @@ BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
+    androidboot.selinux=permissive printk.devkmsg=on ignore_loglevel loglevel=7 \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
     cgroup.memory=nokmem,nosocket \
@@ -139,8 +141,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2024-10-05
 
 # SEPolicy
-BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/oneplus/sm8250-common/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/sm8250-common/sepolicy/vendor
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
 

@@ -6,7 +6,7 @@
 
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
-
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
