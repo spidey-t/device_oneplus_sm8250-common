@@ -1,0 +1,2 @@
+# Allow the feature enabler client to inspect GPU directory properties
+allow vendor_feature_enabler_client gpu_device:dir r_dir_perms;

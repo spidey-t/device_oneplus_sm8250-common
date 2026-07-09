@@ -1,3 +1,5 @@
-/sys/devices/platform/soc/.*/led:torch_0/brightness    u:object_r:sysfs_torch:s0
-/sys/devices/platform/soc/.*/led:torch_1/brightness    u:object_r:sysfs_torch:s0
-/sys/devices/platform/soc/.*/led:switch_2/brightness   u:object_r:sysfs_torch:s0
+# DRM / Display nodes
+/dev/dri(/.*)?                u:object_r:gpu_device:s0
+/dev/msm_drm                  u:object_r:gpu_device:s0
+# Label the ION allocator node explicitly
+/dev/ion                      u:object_r:ion_device:s0

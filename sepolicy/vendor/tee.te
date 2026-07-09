@@ -1,0 +1,2 @@
+allow tee ion_device:chr_file r_file_perms;
+allow tee ion_device:chr_file ioctl;

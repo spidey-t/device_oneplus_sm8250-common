@@ -1,0 +1,2 @@
+# Allow device state manager to read device tree config parameters
+r_dir_file(misctrl, sysfs_dt_firmware_android)

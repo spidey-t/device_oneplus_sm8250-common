@@ -1,0 +1,2 @@
+# Allow system server to query ION allocator memory profiles
+allow system_server ion_device:chr_file r_file_perms;
