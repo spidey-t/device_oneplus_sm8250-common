@@ -1,2 +1,0 @@
-# Allow system-signed apps (like Settings) to map graphical allocations via ION
-allow system_app ion_device:chr_file r_file_perms;

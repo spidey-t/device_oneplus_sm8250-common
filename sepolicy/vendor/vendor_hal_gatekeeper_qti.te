@@ -1,2 +1,0 @@
-allow vendor_hal_gatekeeper_qti ion_device:chr_file r_file_perms;
-allow vendor_hal_gatekeeper_qti ion_device:chr_file ioctl;

@@ -1,2 +1,0 @@
-# Allow software multimedia frameworks to read/write graphic buffers via ION
-allow mediaswcodec ion_device:chr_file r_file_perms;

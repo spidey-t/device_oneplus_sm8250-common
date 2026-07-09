@@ -1,2 +1,0 @@
-# Allow Qualcomm camera HALs to access memory channels via ION
-allow hal_camera_default ion_device:chr_file r_file_perms;

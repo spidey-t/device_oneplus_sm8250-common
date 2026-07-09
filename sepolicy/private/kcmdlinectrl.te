@@ -1,2 +1,0 @@
-# Allow command line controller daemon to read device tree configurations
-r_dir_file(kcmdlinectrl, sysfs_dt_firmware_android)

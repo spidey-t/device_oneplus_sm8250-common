@@ -1,2 +1,0 @@
-# Allow the vendor display proc node to associate with the virtual proc filesystem
-allow vendor_proc_display proc:filesystem associate;

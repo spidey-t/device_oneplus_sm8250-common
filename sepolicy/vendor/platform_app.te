@@ -1,2 +1,0 @@
-# Allow platform apps (such as SystemUI) to access ION memory for UI rendering
-allow platform_app ion_device:chr_file r_file_perms;

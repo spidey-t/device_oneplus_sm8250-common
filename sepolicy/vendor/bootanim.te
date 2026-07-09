@@ -1,2 +1,0 @@
-# Allow boot animation daemon to bind and access ION allocated frames
-allow bootanim ion_device:chr_file r_file_perms;
