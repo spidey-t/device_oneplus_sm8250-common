@@ -80,12 +80,9 @@ DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
-# Forces the target build system components to compile in permissive mode
-SELNX_FORCE_PERMISSIVE := true
-BOARD_SELNX_PERMISSIVE := true
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
-    androidboot.selinux=permissive printk.devkmsg=on ignore_loglevel loglevel=7 \
+    printk.devkmsg=on ignore_loglevel loglevel=7 \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
     cgroup.memory=nokmem,nosocket \
