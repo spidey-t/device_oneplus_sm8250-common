@@ -121,3 +121,12 @@ service vl53l1_daemon_main /odm/bin/vl53l1_daemon_main
     user root
     group root
     socket vl53l1_daemon stream 660 root system
+
+service vendor.fps_hal /vendor/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
+    class late_start
+    user system
+    group system input uhid
+    capabilities SYS_NICE
+    interface vendor.oplus.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint default
+    override
+    seclabel u:object_r:hal_fingerprint_oplus:s0

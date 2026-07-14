@@ -1,0 +1,2 @@
+# Prevents denial spam from breaking tests when zygote handles standard platform init
+dontaudit zygote proc_pid_max:file read;

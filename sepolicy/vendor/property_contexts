@@ -1,0 +1,4 @@
+# Change 'vendor.pd_mapper.status' to the precise property string flagged in your log
+vendor.pd_mapper.status      u:object_r:vendor_pd_mapper_prop:s0
+
+persist.vendor.nfc.nxp.lx_debug_mask    u:object_r:vendor_nfc_prop:s0

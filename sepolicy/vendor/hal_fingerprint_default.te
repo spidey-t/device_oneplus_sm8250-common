@@ -1,0 +1,3 @@
+# Allow fingerprint HAL to look inside the vendor persist engineer directory
+allow hal_fingerprint_default vendor_persist_engineer_file:dir search;
+allow hal_fingerprint_default vendor_persist_engineer_file:file r_file_perms;

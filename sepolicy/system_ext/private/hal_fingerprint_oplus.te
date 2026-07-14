@@ -1,0 +1,27 @@
+type hal_fingerprint_oplus, domain, coredomain;
+type hal_fingerprint_oplus_exec, exec_type, system_file_type, file_type;
+
+# Associate with the internal platform service attribute
+typeattribute hal_fingerprint_oplus hal_fingerprint_server;
+
+# Setup core daemon domain bounds within coredomain architecture
+init_daemon_domain(hal_fingerprint_oplus)
+
+# Allow interacting with the hwservicemanager loop
+allow hal_fingerprint_oplus hwservicemanager:binder { call transfer };
+allow hwservicemanager hal_fingerprint_oplus:binder { call transfer };
+allow hwservicemanager hal_fingerprint_oplus:dir search;
+allow hwservicemanager hal_fingerprint_oplus:file { read open };
+
+# Allow adding and finding the platform hwservice token safely
+allow hal_fingerprint_oplus hal_fingerprint_hwservice:hwservice_manager { add find };
+
+# Hardware mapping rules
+allow hal_fingerprint_oplus fingerprint_device:chr_file rw_file_perms;
+allow hal_fingerprint_oplus sysfs:file rw_file_perms;
+allow hal_fingerprint_oplus sysfs_graphics:file r_file_perms;
+allow hal_fingerprint_oplus uhid_device:chr_file rw_file_perms;
+
+# Framework communication bridges
+allow system_server hal_fingerprint_oplus:binder { call transfer };
+allow hal_fingerprint_oplus system_server:binder { call transfer };
