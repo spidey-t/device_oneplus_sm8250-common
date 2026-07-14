@@ -1,0 +1,5 @@
+# 3A: Allow versioned privileged apps to find Vibrator Control services
+allow priv_app_36 fwk_vibrator_control_service:service_manager find;
+
+# 3C: Allow USAP pool socket queries during process finalization
+allow priv_app zygote_socket:unix_stream_socket getopt;
