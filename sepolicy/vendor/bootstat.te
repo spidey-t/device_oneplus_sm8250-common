@@ -1,0 +1,2 @@
+binder_use(bootstat)
+allow bootstat servicemanager:binder call;

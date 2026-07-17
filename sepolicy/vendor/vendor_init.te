@@ -1,1 +1,5 @@
 set_prop(vendor_init, vendor_persist_radio_prop)
+
+# Allow creating schedtune boost/colocate nodes
+allow vendor_init device:file create_file_perms;
+allow vendor_init device:dir create_dir_perms;

@@ -1,0 +1,2 @@
+binder_use(usbd)
+allow servicemanager usbd:binder call;
