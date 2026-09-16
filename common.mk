@@ -193,6 +193,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
+# Stock camera cannot show its runtime-permission dialog on AOSP-derived
+# systems (OPLUS permission lookups abort first), which leaves the app
+# timing out and self-finishing on a fresh install. Pre-grant the
+# camera-affecting ones so first launch works.
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/default-permissions-oplus-camera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions-oplus-camera.xml
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
