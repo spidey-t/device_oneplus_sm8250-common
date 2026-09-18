@@ -1,0 +1,41 @@
+# diag_use() is gated behind userdebug_or_eng() upstream; this is a user build,
+# so re-grant /dev/diag access to the vendor daemons that legitimately use it
+# to restore modem/IMS/sensor diagnostics.
+r_dir_file(vendor_ims, vendor_sysfs_diag)
+allow vendor_ims vendor_diag_device:chr_file rw_file_perms;
+
+r_dir_file(rild, vendor_sysfs_diag)
+allow rild vendor_diag_device:chr_file rw_file_perms;
+
+r_dir_file(hal_sensors_default, vendor_sysfs_diag)
+allow hal_sensors_default vendor_diag_device:chr_file rw_file_perms;
+
+r_dir_file(vendor_sensors_qti, vendor_sysfs_diag)
+allow vendor_sensors_qti vendor_diag_device:chr_file rw_file_perms;
+
+r_dir_file(vendor_netmgrd, vendor_sysfs_diag)
+allow vendor_netmgrd vendor_diag_device:chr_file rw_file_perms;
+
+r_dir_file(vendor_hal_imsrtp, vendor_sysfs_diag)
+allow vendor_hal_imsrtp vendor_diag_device:chr_file rw_file_perms;
+
+r_dir_file(vendor_dpmd, vendor_sysfs_diag)
+allow vendor_dpmd vendor_diag_device:chr_file rw_file_perms;
+
+r_dir_file(vendor_qti, vendor_sysfs_diag)
+allow vendor_qti vendor_diag_device:chr_file rw_file_perms;
+
+r_dir_file(vendor_hal_rcsservice, vendor_sysfs_diag)
+allow vendor_hal_rcsservice vendor_diag_device:chr_file rw_file_perms;
+
+r_dir_file(vendor_cnd, vendor_sysfs_diag)
+allow vendor_cnd vendor_diag_device:chr_file rw_file_perms;
+
+r_dir_file(vendor_adpl, vendor_sysfs_diag)
+allow vendor_adpl vendor_diag_device:chr_file rw_file_perms;
+
+r_dir_file(hal_graphics_composer_default, vendor_sysfs_diag)
+allow hal_graphics_composer_default vendor_diag_device:chr_file rw_file_perms;
+
+r_dir_file(hal_audio_default, vendor_sysfs_diag)
+allow hal_audio_default vendor_diag_device:chr_file rw_file_perms;
