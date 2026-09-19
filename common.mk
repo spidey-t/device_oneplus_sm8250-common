@@ -6,6 +6,7 @@
 
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
+$(call soong_config_set,camera,package_name,com.oplus.packageName)
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
