@@ -123,6 +123,8 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('remote_handle_open')
         .clear_symbol_version('remote_register_buf_attr')
         .clear_symbol_version('remote_register_buf'),
+    'vendor/lib64/libAlgoProcess.so': blob_fixup()
+        .binary_regex_replace(b'/odm/lib64/hta_lib/libhta_hexagon_runtime.so', b'/vendor/lib64/libhta_hexagon_runtime.so\x00\x00\x00\x00\x00'),
     'vendor/lib64/libdpps.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/sensors.ssc.so': blob_fixup()
