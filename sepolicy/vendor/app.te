@@ -1,0 +1,3 @@
+# Camera apps (com.oneplus.camera pictureprocessing) run SNPE DSP inference
+# in-process and need full FastRPC access to /dev/adsprpc-smd.
+allow appdomain vendor_qdsp_device:chr_file { open read write ioctl map };
