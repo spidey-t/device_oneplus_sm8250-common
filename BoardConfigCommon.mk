@@ -57,7 +57,7 @@ TARGET_BOOTLOADER_BOARD_NAME := kona
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
 
 # Camera
-$(call soong_config_set,camera,override_format_from_reserved,true)
+$(call soong_config_set_bool,camera,override_format_from_reserved,true)
 TARGET_USES_OPLUS_CAMERA := true
 
 # Properties
