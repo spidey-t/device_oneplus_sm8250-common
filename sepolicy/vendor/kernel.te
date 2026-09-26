@@ -1,0 +1,6 @@
+# QRTR (AF_QIPCRTR) sockets are created by the kernel-side subsystem
+# notifier (SSR detection) on all build types. The QC legacy-um policy
+# gates the equivalent rule behind userdebug_or_eng(), which breaks
+# silent modem/WiFi crash recovery on user builds.
+
+allow kernel self:qipcrtr_socket { create getopt setopt };
