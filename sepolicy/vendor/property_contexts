@@ -2,3 +2,7 @@
 vendor.pd_mapper.status      u:object_r:vendor_pd_mapper_prop:s0
 
 persist.vendor.nfc.nxp.lx_debug_mask    u:object_r:vendor_nfc_prop:s0
+
+# Vendor-init-set modem/IMS properties (set in vendor.prop, currently mislabeled default_prop)
+persist.data.iwlan.enable               u:object_r:vendor_persist_radio_prop:s0
+persist.dbg.ims_volte_enable            u:object_r:vendor_persist_radio_prop:s0

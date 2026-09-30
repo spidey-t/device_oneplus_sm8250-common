@@ -1,1 +1,4 @@
 allow vendor_wcnss_service property_socket:sock_file write;
+
+# Complete set_prop pattern for cnss-daemon (connectto init property_service)
+unix_socket_connect(vendor_wcnss_service, property, init)
