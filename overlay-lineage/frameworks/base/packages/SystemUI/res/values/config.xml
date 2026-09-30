@@ -8,14 +8,4 @@
     <!-- Color of the UDFPS Pressed view -->
     <color name="config_udfpsColor">#ffffe6</color>
 
-    <!--
-         The QTI health HAL reports this device's battery current in mA in
-         maxChargingCurrentMicroamps. SettingsLib treats it as uA when it
-         calculates charging power, so scale the wattage thresholds down by
-         1000 to keep the lock-screen charging-speed label accurate.
-    -->
-    <integer name="config_chargingSlowlyThreshold">5000</integer>
-    <integer name="config_chargingFastThreshold">7500</integer>
-    <integer name="config_chargingFastThreshold_v2">20000</integer>
-
 </resources>
