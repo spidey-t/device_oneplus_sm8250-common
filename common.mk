@@ -6,7 +6,11 @@
 
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
+
+#  temp ASCP
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+# 48 mp camera
+$(call soong_config_set,camera,package_name,com.oplus.packageName)
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
