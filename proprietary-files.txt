@@ -300,7 +300,7 @@ vendor/lib64/libmorpho_dcface.so
 vendor/lib64/libmorpho_image_refiner_deflicker.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libnanopb.so
-vendor/lib64/libnightvision.so
+vendor/lib64/libnightvision.so;FIX_SONAME
 vendor/lib64/libofflinelog.so
 vendor/lib64/libop-bokeh.so
 vendor/lib64/libos.so
