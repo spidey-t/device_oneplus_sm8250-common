@@ -1,1 +1,1 @@
-allow vendor_wcnss_service property_socket:sock_file write;
+set_prop(vendor_wcnss_service, vendor_vold_serialno_prop)

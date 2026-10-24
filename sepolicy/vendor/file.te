@@ -1,1 +1,5 @@
-type sysfs_torch, sysfs_type, fs_type;
+# Isolated legacy RIL NV storage at /data/opponvitems.
+type rild_opponvitems_file, file_type, data_file_type, core_data_file_type;
+
+# Dedicated labels for the torch brightness sysfs nodes used by cameraserver.
+type sysfs_torch, fs_type, sysfs_type;

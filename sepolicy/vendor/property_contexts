@@ -2,3 +2,5 @@
 vendor.pd_mapper.status      u:object_r:vendor_pd_mapper_prop:s0
 
 persist.vendor.nfc.nxp.lx_debug_mask    u:object_r:vendor_nfc_prop:s0
+
+vendor.vold.serialno                     u:object_r:vendor_vold_serialno_prop:s0 exact string

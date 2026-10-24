@@ -2,3 +2,5 @@
 vendor_internal_prop(vendor_persist_radio_prop)
 
 vendor_internal_prop(vendor_pd_mapper_prop)
+
+vendor_internal_prop(vendor_vold_serialno_prop)
